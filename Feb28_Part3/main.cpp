@@ -38,6 +38,11 @@ void display(void)
 //    glVertex2d(410, -100);
     glEnd();
 
+    glBegin(GL_LINES);
+    glVertex2d(300,-100);
+    glVertex2d(50, 200);
+
+    glEnd();
     glFlush();
 }
 void init (void)
