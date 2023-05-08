@@ -66,7 +66,8 @@ void display ()
     glVertex2f( a2+500, b2+500);
     glVertex2f( a2+0, b2+500);
     glEnd();
-//    y++;
+
+
     x++;
     if(x>=500){
         printf("%d %d\n",x, y);
