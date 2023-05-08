@@ -36,17 +36,9 @@ void display ()
     glColor3ub(25,117,43);
     glVertex2f( 100,300);
     glVertex2f( 300, 300);
-    glVertex2f( 200, 380);
+    glVertex2f( 200, 400);
     glEnd();
-
-//    glBegin(GL_POLYGON); // Start drawing a polygon
-//    glColor3ub(18,232,61); // Set the color to red
-//    glVertex2f(150, 150); // Specify the first vertex
-//    glVertex2f(350, 150); // Specify the second vertex
-//    glVertex2f(350, 350); // Specify the third vertex
-//    glVertex2f(150, 350); // Specify the fourth vertex
-//    glEnd(); // End drawing the polygon
-
+// for squre
     glBegin(GL_POLYGON);
     glColor3ub(18,232,61);
     glVertex2f(100,100);
@@ -67,7 +59,7 @@ int main (int argc, char** argv)
     glutInitWindowPosition(100, 0);
 
     // Giving name to window
-    glutCreateWindow("bahubali 3");
+    glutCreateWindow("Houses");
     myInit();
 
     glutDisplayFunc(display);
