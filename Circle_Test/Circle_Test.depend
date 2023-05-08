@@ -221,7 +221,7 @@
 	<_mingw.h>
 	<stddef.h>
 
-1676994981 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
+1453865572 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
@@ -234,4 +234,12 @@
 
 1250308678 c:\program files (x86)\codeblocks\mingw\include\math.h
 	<_mingw.h>
+
+1683563528 source:d:\computergraphicsopengl\circle_test\main.cpp
+	<iostream>
+	<windows.h>
+	<stdio.h>
+	<GL/glut.h>
+	<math.h>
+	<iostream>
 
