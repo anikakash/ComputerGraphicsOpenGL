@@ -235,3 +235,11 @@
 1250308678 c:\program files (x86)\codeblocks\mingw\include\math.h
 	<_mingw.h>
 
+1683522470 source:d:\computergraphicsopengl\house\main.cpp
+	<iostream>
+	<windows.h>
+	<stdio.h>
+	<GL/glut.h>
+	<math.h>
+	<iostream>
+
