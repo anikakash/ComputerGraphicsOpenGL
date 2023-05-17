@@ -9,6 +9,9 @@ using namespace std;
 
 int x=250;
 int y=250;
+int x_1=104;
+int y_1=104;
+int val=46, val2=592;
 bool right_side = true, left_side = false;
 int a1=0, b1=0, a2=0, b2=0;
 
@@ -21,10 +24,10 @@ void myInit ()
     // setting window dimension in X- and Y- direction
     glOrtho(0, 500, 0, 500, -10.0, 10.0);
 }
-void circle(float x,float y)
+void circle(float x,float y, float r)
 {
     float x1,y1,x2,y2;
-    float radius=50;
+    float radius=r;
     x1=x;
     y1=y;
     glBegin(GL_TRIANGLE_FAN);
@@ -60,26 +63,27 @@ void display ()
 
 
 //    x++;
-    if(x==446)
+    if(y==446)
     {
         right_side = false;
         left_side = true;
     }
-    if(x==46){
+    if(y==val){
+        x+=5; val+=12;
         right_side = true;
         left_side = false;
     }
     if(right_side==true)
     {
         printf("%d %d\n",x, y);
-        x+=4;
+        y+=4;
     }
     else if(right_side==false ){
          printf("%d %d\n",x, y);
-        x-=4;
+        y-=4;
     }
-
-    circle( x, y);
+    circle( x, y, 50);
+//    circle(x_1, y_1, 40);
     glFlush();
 }
 void update(int val)

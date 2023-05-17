@@ -62,10 +62,10 @@ void circleRe(int x,int y,int r,int g,int b)
     glColor3ub(r,g,b);
     glVertex2f(x1,y1);
     float angle;
-    for (angle=0; angle<=360; angle+=0.1)
+    for (angle=0.1; angle<=360; angle+=0.1)
     {
-        int tx=rand() % 2;
-        int ty=rand() % 70;
+        int tx=int(angle*angle*angle)% 2;
+        int ty=int(angle*angle*angle*angle)% 70;
         x2 = tx+x1+sin((angle*3.1416)/180)*radiusx;
         y2 = ty+y1+cos((angle*3.1416)/180)*radiusy;
         glVertex2f(x2,y2);
