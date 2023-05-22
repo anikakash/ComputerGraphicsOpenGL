@@ -34,7 +34,7 @@ void myInit ()
 void circle(float x,float y)
 {
     float x1,y1,x2,y2;
-    float radius=40;
+    float radius=80;
     x1=x;
     y1=y;
     glBegin(GL_TRIANGLE_FAN);
@@ -56,26 +56,26 @@ void pac_man_mouth(){
     glBegin(GL_TRIANGLES);
     glColor3f(173.0/255.0, 25.0/255.0, 9.0/255.0);
     glVertex2f(150, tri_x);
-    glVertex2f(247, 250);
+    glVertex2f(250, 250);
     glVertex2f(150, tri_y);
     glEnd();
-    if(tri_fx){
-        tri_x--;
-        if(tri_x==250)tri_fx=false;
-    }
-    else if(!tri_fx){
-        tri_x++;
-        if(tri_x==350)tri_fx=true;
-    }
-
-    if(tri_fy){
-        tri_y++;
-        if(tri_y==250)tri_fy=false;
-    }
-    else if(!tri_fy){
-        tri_y--;
-        if(tri_y==150)tri_fy=true;
-    }
+//    if(tri_fx){
+//        tri_x--;
+//        if(tri_x==250)tri_fx=false;
+//    }
+//    else if(!tri_fx){
+//        tri_x++;
+//        if(tri_x==350)tri_fx=true;
+//    }
+//
+//    if(tri_fy){
+//        tri_y++;
+//        if(tri_y==250)tri_fy=false;
+//    }
+//    else if(!tri_fy){
+//        tri_y--;
+//        if(tri_y==150)tri_fy=true;
+//    }
 }
 
 void display ()
@@ -90,10 +90,11 @@ void display ()
 
 
     glBegin(GL_QUADS);
-   glColor3f(173.0/255.0, 25.0/255.0, 9.0/255.0);
+//   glColor3f(173.0/255.0, 25.0/255.0, 9.0/255.0);
+    glColor3f(90.0/255.0, 252.0/255.0, 3.0/255.0);
     glVertex2f( a1+0,b1+0 );
     glVertex2f( a1+500, b1+0 );
-   glColor3f(173.0/255.0, 25.0/255.0, 9.0/255.0);
+//   glColor3f(173.0/255.0, 25.0/255.0, 9.0/255.0);
     glVertex2f( a2+500, b2+500);
     glVertex2f( a2+0, b2+500);
     glEnd();

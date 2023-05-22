@@ -24,7 +24,7 @@ void myInit ()
 void circle(float x,float y)
 {
     float x1,y1,x2,y2;
-    float radius=50;
+    float radius=100;
     x1=x;
     y1=y;
     glBegin(GL_TRIANGLE_FAN);
@@ -50,34 +50,34 @@ void display ()
 
     glColor3ub(96, 160, 233);
 
-    glVertex2f( a1+0,b1+0 );
-    glVertex2f( a1+500, b1+0 );
+    glVertex2f( 0,0 );
+    glVertex2f( 500, 0 );
 
-    glColor3ub(159, 185, 248);
-    glVertex2f( a2+500, b2+500);
-    glVertex2f( a2+0, b2+500);
+//    glColor3ub(159, 185, 248);
+    glVertex2f( 500, 500);
+    glVertex2f( 0,500);
     glEnd();
 
 
 //    x++;
-    if(x==446)
-    {
-        right_side = false;
-        left_side = true;
-    }
-    if(x==46){
-        right_side = true;
-        left_side = false;
-    }
-    if(right_side==true)
-    {
-        printf("%d %d\n",x, y);
-        x+=4;
-    }
-    else if(right_side==false ){
-         printf("%d %d\n",x, y);
-        x-=4;
-    }
+//    if(x==446)
+//    {
+//        right_side = false;
+//        left_side = true;
+//    }
+//    if(x==46){
+//        right_side = true;
+//        left_side = false;
+//    }
+//    if(right_side==true)
+//    {
+//        printf("%d %d\n",x, y);
+//        x+=4;
+//    }
+//    else if(right_side==false ){
+//         printf("%d %d\n",x, y);
+//        x-=4;
+//    }
 
     circle( x, y);
     glFlush();
