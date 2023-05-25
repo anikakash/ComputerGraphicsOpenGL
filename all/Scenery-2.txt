@@ -1,0 +1,392 @@
+#include<windows.h>
+#include <GL/gl.h>
+#include <GL/glut.h>
+void display(void)
+{
+/* clear all pixels */
+glClear (GL_COLOR_BUFFER_BIT);
+/* draw white polygon (rectangle) with corners at
+* (0.25, 0.25, 0.0) and (0.75, 0.75, 0.0)
+*/
+ 
+//pani
+glColor3ub (1, 180, 241);
+ 
+glBegin(GL_POLYGON);
+glVertex2d (0, 0);
+glVertex2d (1000, 0);
+glVertex2d (1000, 200);
+glVertex2d (0, 150);
+ 
+glEnd();
+ 
+ 
+//mati
+glColor3ub (202, 158, 4);
+ 
+glBegin(GL_POLYGON);
+glVertex2d (0, 150);
+glVertex2d (1000, 200);
+glVertex2d (1000, 350);
+glVertex2d (0, 350);
+ 
+glEnd();
+ 
+//ghor er mati
+glColor3ub (21, 67, 96);
+glBegin(GL_POLYGON);
+glVertex2d (50,170);
+glVertex2d (165,170);
+glVertex2d (165,180);
+glVertex2d (50, 180);
+glEnd();
+ 
+//Wall box
+glColor3ub (171, 235, 198);
+glBegin(GL_POLYGON);
+glVertex2d (60,180);
+glVertex2d (155,180);
+glVertex2d (155, 255);
+glVertex2d (60, 255);
+glEnd();
+//roof
+glColor3ub (120, 66, 18);
+glBegin(GL_POLYGON);
+glVertex2d (40, 255);
+glVertex2d (175,255);
+glVertex2d (105, 295);
+glEnd();
+ 
+//window
+glColor3ub (245, 176, 65);
+glBegin(GL_POLYGON);
+glVertex2d (70,215);
+glVertex2d (80,215);
+glVertex2d (80, 230);
+glVertex2d (70, 230);
+glEnd();
+//window
+glColor3ub (245, 176, 65);
+glBegin(GL_POLYGON);
+glVertex2d (135, 215);
+glVertex2d (145,215);
+glVertex2d (145, 230);
+glVertex2d (135, 230);
+glEnd();
+ 
+//door
+glColor3ub (40, 180, 99);
+glBegin(GL_POLYGON);
+glVertex2d (90, 180);
+glVertex2d (125,180);
+glVertex2d (125, 245);
+glVertex2d (90, 245);
+glEnd();
+ 
+ 
+//Tree1
+//treebase
+glColor3ub (186, 112, 0);
+glBegin(GL_POLYGON);
+glVertex2d (340,190);
+glVertex2d (355,190);
+glVertex2d (355, 255);
+glVertex2d (340, 255);
+glEnd();
+//tree
+glColor3ub (46, 97, 0);
+glBegin(GL_POLYGON);
+glVertex2d (300, 255);
+glVertex2d (400,255);
+glVertex2d (350, 325);
+glEnd();
+ 
+glColor3ub (46, 97, 0);
+glBegin(GL_POLYGON);
+glVertex2d (300, 275);
+glVertex2d (400,275);
+glVertex2d (350, 345);
+glEnd();
+ 
+ 
+//Ghor-2
+//ghor er mati
+glColor3ub (21, 67, 96);
+glBegin(GL_POLYGON);
+glVertex2d (200,170);
+glVertex2d (315,170);
+glVertex2d (315,180);
+glVertex2d (200, 180);
+glEnd();
+ 
+//Wall box
+glColor3ub (171, 235, 198);
+glBegin(GL_POLYGON);
+glVertex2d (210,180);
+glVertex2d (305,180);
+glVertex2d (305, 255);
+glVertex2d (210, 255);
+glEnd();
+//roof
+glColor3ub (120, 66, 18);
+glBegin(GL_POLYGON);
+glVertex2d (190, 255);
+glVertex2d (325,255);
+glVertex2d (255, 295);
+glEnd();
+ 
+//window
+glColor3ub (245, 176, 65);
+glBegin(GL_POLYGON);
+glVertex2d (220,215);
+glVertex2d (230,215);
+glVertex2d (230, 230);
+glVertex2d (220, 230);
+glEnd();
+//window
+glColor3ub (245, 176, 65);
+glBegin(GL_POLYGON);
+glVertex2d (285, 215);
+glVertex2d (295,215);
+glVertex2d (295, 230);
+glVertex2d (285, 230);
+glEnd();
+ 
+//door
+glColor3ub (40, 180, 99);
+glBegin(GL_POLYGON);
+glVertex2d (240, 180);
+glVertex2d (275,180);
+glVertex2d (275, 245);
+glVertex2d (240, 245);
+glEnd();
+ 
+//Tree2
+//treebase
+glColor3ub (186, 112, 0);
+glBegin(GL_POLYGON);
+glVertex2d (490,190);
+glVertex2d (505,190);
+glVertex2d (505, 255);
+glVertex2d (490, 255);
+glEnd();
+//tree
+glColor3ub (46, 97, 0);
+glBegin(GL_POLYGON);
+glVertex2d (450, 255);
+glVertex2d (550,255);
+glVertex2d (500, 325);
+glEnd();
+ 
+glColor3ub (46, 97, 0);
+glBegin(GL_POLYGON);
+glVertex2d (450, 275);
+glVertex2d (550,275);
+glVertex2d (500, 345);
+glEnd();
+glColor3ub (46, 97, 0);
+glBegin(GL_POLYGON);
+glVertex2d (450, 295);
+glVertex2d (550,295);
+glVertex2d (500, 345);
+glEnd();
+ 
+ 
+//Ghor-3
+//ghor er mati
+glColor3ub (21, 67, 96);
+glBegin(GL_POLYGON);
+glVertex2d (600,220);
+glVertex2d (715,220);
+glVertex2d (715,230);
+glVertex2d (600, 230);
+glEnd();
+ 
+//Wall box
+glColor3ub (171, 235, 198);
+glBegin(GL_POLYGON);
+glVertex2d (610,230);
+glVertex2d (705,230);
+glVertex2d (705, 305);
+glVertex2d (610, 305);
+glEnd();
+//roof
+glColor3ub (120, 66, 18);
+glBegin(GL_POLYGON);
+glVertex2d (590, 305);
+glVertex2d (725,305);
+glVertex2d (655, 345);
+glEnd();
+ 
+//window
+glColor3ub (245, 176, 65);
+glBegin(GL_POLYGON);
+glVertex2d (620,265);
+glVertex2d (630,265);
+glVertex2d (630, 280);
+glVertex2d (620, 280);
+glEnd();
+//window
+glColor3ub (245, 176, 65);
+glBegin(GL_POLYGON);
+glVertex2d (685, 265);
+glVertex2d (695,265);
+glVertex2d (695, 280);
+glVertex2d (685, 280);
+glEnd();
+ 
+//door
+glColor3ub (40, 180, 99);
+glBegin(GL_POLYGON);
+glVertex2d (640, 230);
+glVertex2d (675,230);
+glVertex2d (675, 295);
+glVertex2d (640, 295);
+glEnd();
+ 
+ 
+//Tree3
+//treebase
+glColor3ub (186, 112, 0);
+glBegin(GL_POLYGON);
+glVertex2d (840,190);
+glVertex2d (855,190);
+glVertex2d (855, 255);
+glVertex2d (840, 255);
+glEnd();
+//tree
+glColor3ub (46, 97, 0);
+glBegin(GL_POLYGON);
+glVertex2d (800, 255);
+glVertex2d (900,255);
+glVertex2d (850, 325);
+glEnd();
+ 
+glBegin(GL_POLYGON);
+glVertex2d (800, 275);
+glVertex2d (900,275);
+glVertex2d (850, 345);
+glEnd();
+ 
+//boat
+glColor3ub (2,10, 2);
+glBegin(GL_POLYGON);
+ 
+ 
+glVertex2d (49.61,39.74);
+glVertex2d (100.38,35.51);
+glVertex2d (250.30,36.11);
+glVertex2d (299.26,40.30);
+glVertex2d (250.30,19.79);
+glVertex2d (100.38,19.71);
+glEnd();
+glColor3ub (158, 104, 12);
+glBegin(GL_POLYGON);
+glVertex2d (100.38,35.51);
+glVertex2d (250.30,36.11);
+glVertex2d (229.14,70.57);
+glVertex2d (119.12,70.57);
+glEnd();
+ 
+//hill1
+glColor3ub (54, 131, 0);
+ 
+ 
+glBegin(GL_POLYGON);
+glVertex2d (0, 350);
+glVertex2d (0, 450);
+glVertex2d (100, 350);
+glEnd();
+ 
+glBegin(GL_POLYGON);
+glVertex2d (100, 350);
+glVertex2d (200, 480);
+glVertex2d (300, 350);
+glEnd();
+ 
+glBegin(GL_POLYGON);
+glVertex2d (300, 350);
+glVertex2d (400, 480);
+glVertex2d (500, 350);
+glEnd();
+glBegin(GL_POLYGON);
+glVertex2d (500, 350);
+glVertex2d (600, 480);
+glVertex2d (700, 350);
+glEnd();
+glBegin(GL_POLYGON);
+glVertex2d (700, 350);
+glVertex2d (800, 480);
+glVertex2d (900, 350);
+glEnd();
+glBegin(GL_POLYGON);
+glVertex2d (900, 350);
+glVertex2d (1000, 450);
+glVertex2d (1000, 350);
+glEnd();
+//hill2
+glColor3ub (8, 208, 19);
+ 
+glBegin(GL_POLYGON);
+glVertex2d (0, 350);
+glVertex2d (100, 500);
+glVertex2d (200, 350);
+glEnd();
+glBegin(GL_POLYGON);
+glVertex2d (200, 350);
+glVertex2d (300, 500);
+glVertex2d (400, 350);
+glEnd();
+glBegin(GL_POLYGON);
+glVertex2d (400, 350);
+glVertex2d (500, 500);
+glVertex2d (600, 350);
+glEnd();
+glBegin(GL_POLYGON);
+glVertex2d (600, 350);
+glVertex2d (700, 500);
+glVertex2d (800, 350);
+glEnd();
+glBegin(GL_POLYGON);
+glVertex2d (800, 350);
+glVertex2d (900, 500);
+glVertex2d (1000, 350);
+ 
+glEnd();
+ 
+ 
+ 
+/* don't wait!
+* start processing buffered OpenGL routines
+*/
+glFlush ();
+}
+void init (void)
+{
+/* select clearing (background) color */
+glClearColor (0.0, 128.0, 255.0, 0.0);
+/* initialize viewing values */
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+gluOrtho2D(0, 1000, 0, 500);
+}
+/*
+* Declare initial window size, position, and display mode
+* (single buffer and RGBA). Open window with "hello"
+* in its title bar. Call initialization routines.
+* Register callback function to display graphics.
+* Enter main loop and process events.
+*/
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize (1000, 500);
+glutInitWindowPosition (0, 0);
+glutCreateWindow ("mushfiqur_13832");
+init ();
+glutDisplayFunc(display);
+glutMainLoop();
+return 0; /* ISO C requires main to return int. */
+}
+ 

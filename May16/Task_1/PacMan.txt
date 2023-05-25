@@ -1,0 +1,109 @@
+#include <iostream>
+#include<windows.h>
+#include<stdio.h>
+#include<GL/glut.h>
+#include<math.h>
+#define pi 3.142857
+#include<iostream>
+using namespace std;
+
+int x=250;
+int y=250;
+
+int a1=0, b1=0, a2=0, b2=0;
+int tri_x = 350, tri_y=150;
+bool tri_fx=true, tri_fy=true;
+
+void myInit ()
+{
+    glClearColor(128.0f/255.0f,0, 0, 1.0f);
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+
+    // setting window dimension in X- and Y- direction
+    glOrtho(0, 500, 0, 500, -10.0, 10.0);
+
+
+}
+void circle(float x,float y, float r)
+{
+    float x1,y1,x2,y2;
+    float radius=r;
+    x1=x;
+    y1=y;
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3ub(244, 252, 3);
+    glVertex2f(x1,y1);
+    float angle;
+    for (angle=0; angle<=360; angle+=0.5)
+    {
+        x2 = x1+sin((angle*3.1416)/180)*radius;
+        y2 = y1+cos((angle*3.1416)/180)*radius;
+        glVertex2f(x2,y2);
+    }
+
+    glEnd();
+
+
+}
+void pac_man_mouth(){
+    glBegin(GL_TRIANGLES);
+    glColor3f(173.0/255.0, 25.0/255.0, 9.0/255.0);
+    glVertex2f(150, tri_x);
+    glVertex2f(250, 250);
+    glVertex2f(150, tri_y);
+    glEnd();
+    if(tri_fx){
+        tri_x--;
+        if(tri_x==250)tri_fx=false;
+    }
+    else if(!tri_fx){
+        tri_x++;
+        if(tri_x==350)tri_fx=true;
+    }
+
+    if(tri_fy){
+        tri_y++;
+        if(tri_y==250)tri_fy=false;
+    }
+    else if(!tri_fy){
+        tri_y--;
+        if(tri_y==150)tri_fy=true;
+    }
+}
+
+void display ()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glBegin(GL_QUADS);
+    glColor3f(173.0/255.0, 25.0/255.0, 9.0/255.0);
+    glVertex2f( a1+0,b1+0 );
+    glVertex2f( a1+500, b1+0 );
+    glVertex2f( a2+500, b2+500);
+    glVertex2f( a2+0, b2+500);
+    glEnd();
+    circle( x, y, 40.0);
+    pac_man_mouth();
+    circle(50,y,5);
+    circle(100,y,5);
+    glFlush();
+}
+void update(int val)
+{
+    glutPostRedisplay();
+    glutTimerFunc(20, update, 0);
+}
+int main (int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+    glutInitWindowSize(500, 500);
+    glutInitWindowPosition(100, 0);
+    glutCreateWindow("Anik Dash Akash 201-15-14210");
+    myInit();
+    glutDisplayFunc(display);
+    glutTimerFunc(25, update, 0);
+    update(0);
+    glutMainLoop();
+}

@@ -1,0 +1,132 @@
+#include <iostream> 
+#include<windows.h> 
+#include<stdio.h> 
+#include<GL/glut.h> 
+#include<math.h> 
+#define pi 3.142857 
+#include<iostream> 
+using namespace std; 
+ 
+void myInit () 
+{ 
+//glClearColor(0.0, 1.0, 0.0, 0.0); 
+ //glClearColor(184.0f/255.0f, 213.0f/255.0f, 238.0f/255.0f, 1.0f); 
+ //glColor3f(0.0, 0.2, 0.0); 
+ glClearColor(1.0f, 1.0f, 1.0f, 1.0f); ///(R,G,B,alpha) 0-1 
+ 
+ glMatrixMode(GL_PROJECTION); 
+ glLoadIdentity(); 
+ // glEnable( GL_POINT_SMOOTH ); 
+ 
+ // setting window dimension in X- and Y- direction 
+ glOrtho(0, 500, 0, 500, -10.0, 10.0); 
+} 
+void display () 
+{ 
+ glClear(GL_COLOR_BUFFER_BIT); 
+ 
+//Triangle 
+//1st 
+glBegin(GL_TRIANGLES); 
+glColor3ub(1, 1, 1); 
+glVertex2f( 60,250 ); 
+glVertex2f( 190, 370 ); 
+glVertex2f( 320, 250); 
+glEnd(); 
+ 
+//2nd 
+glBegin(GL_TRIANGLES); 
+glColor3ub(255, 255, 255); 
+glVertex2f( 70,250 ); 
+glVertex2f( 190, 360 ); 
+glVertex2f( 310, 250); 
+glEnd(); 
+ 
+//3rd 
+glBegin(GL_TRIANGLES); 
+glColor3ub(1, 1, 1); 
+glVertex2f( 190, 370 ); 
+glVertex2f( 320, 250); 
+glVertex2f( 480, 250 ); 
+glEnd(); 
+ 
+//4th 
+glBegin(GL_TRIANGLES); 
+glColor3ub(1, 1, 1); 
+glVertex2f( 280, 320 ); 
+glVertex2f( 370, 330 ); 
+glVertex2f( 480, 250); 
+glEnd(); 
+ 
+ 
+ 
+ 
+ 
+//Quadraple 
+ 
+glBegin(GL_QUADS); 
+glColor3ub(255, 255, 255); 
+glVertex2f( 255, 315 ); 
+glVertex2f( 275, 315 ); 
+glVertex2f( 275, 260); 
+glVertex2f( 255, 260); 
+glEnd(); 
+ 
+//square1 
+glBegin(GL_QUADS); 
+glColor3ub(1, 1, 1); 
+glVertex2f( 179, 295 ); 
+glVertex2f( 189, 295 ); 
+glVertex2f( 189, 285); 
+glVertex2f( 179, 285); 
+glEnd(); 
+ 
+//square2 
+glBegin(GL_QUADS); 
+glVertex2f( 201, 295 ); 
+glVertex2f( 191, 295 ); 
+glVertex2f( 191, 285); 
+glVertex2f( 201, 285); 
+glEnd(); 
+ 
+//square3 
+glBegin(GL_QUADS); 
+glVertex2f( 179, 273 ); 
+glVertex2f( 189, 273 ); 
+glVertex2f( 189, 283); 
+glVertex2f( 179, 283); 
+glEnd(); 
+ 
+//square4 
+glBegin(GL_QUADS); 
+glVertex2f( 201, 273 ); 
+glVertex2f( 191, 273 ); 
+glVertex2f( 191, 283); 
+glVertex2f( 201, 283); 
+glEnd(); 
+ 
+ 
+ 
+glFlush(); 
+} 
+ 
+int main (int argc, char** argv) 
+{ 
+ glutInit(&argc, argv); 
+ glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); 
+    // giving window size in X- and Y- directionglutInitWindowSize(500, 500);glutInitWindowPosition(100, 0); 
+ 
+    // giving window size in X and Y direction 
+    glutInitWindowSize(600,600); 
+    glutInitWindowPosition(400, 150); 
+ 
+ 
+ // Giving name to window 
+ glutCreateWindow("Assignment 1"); 
+ myInit(); 
+ 
+ glutDisplayFunc(display); 
+ //glutTimerFunc(25, update, 0); 
+ 
+ glutMainLoop(); 
+}
